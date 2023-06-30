@@ -262,3 +262,78 @@ body {
     padding-top: 60px;
     padding-bottom: 60px;
 }
+
+.container2 {
+    align-items: center;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: auto;
+    /* background-color: #ebeced; */
+}
+
+
+
+.services .merged-cellule {
+    grid-area: 1/3/3/4;
+    display: inline-flex;
+    align-items: center;
+
+
+}
+
+.services .item {
+    padding: 20px;
+    background-color: rgba(237, 237, 237, 0.3);
+    max-width: 450px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.services .item .item-head h2 {
+    color: var(--main-color);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.services .item .item-head i {
+    color: var(--main-color);
+    margin-right: 20px;
+}
+
+.services .item p {
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+
+.services .item .item-head {
+    display: flex;
+    align-items: center;
+}
+
+.services .merged-cellule img {
+    position: relative;
+    text-align: center;
+}
+
+.services .merged-cellule img::before {
+    content: "";
+    background-color: chocolate;
+    width: 200px;
+    height: calc(100% + 100px);
+    position: absolute;
+    top: -50px;
+    right: 0px;
+    z-index: -1;
+}
