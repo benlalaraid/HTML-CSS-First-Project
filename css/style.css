@@ -40,6 +40,7 @@ body {
 
 .header {
     padding: 20px;
+    /* z-index: 1; */
 }
 
 .header .container {
@@ -110,6 +111,7 @@ body {
     right: 0;
     min-width: 200px;
     display: none;
+    z-index: 1;
 }
 
 .header .container .links:hover ul {
@@ -181,4 +183,82 @@ body {
 .landing .intro-text p {
     font-size: 20px;
     line-height: 20px;
+}
+
+.features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f3f3f3;
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.features .feat {
+    padding: 20px;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.features .feat i {
+    color: var(--main-color);
+}
+
+.features .feat h2 {
+    font-weight: 800;
+    margin: 20px 0;
+}
+
+.features .feat p {
+    line-height: 1.66;
+    font-size: 18px;
+
+}
+
+.features .feat2 {
+    box-shadow: 0 5px 2px #dbdbdb;
+}
+
+
+
+.title-page {
+    color: #ebeced;
+    font-size: 142px;
+    font-weight: bold;
+    letter-spacing: -3px;
+    margin-top: 150px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+
+.title-page+p {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    margin-top: -30px;
+}
+
+@media (max-width: 767px) {
+    .title-page {
+        font-size: 70px;
+    }
+
+    .title-page+p {
+        margin-top: -10px;
+        font-size: 15px;
+    }
+}
+
+.services {
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
