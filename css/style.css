@@ -261,18 +261,23 @@ body {
 .services {
     padding-top: 60px;
     padding-bottom: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 100%;
 }
 
-.container2 {
-    align-items: center;
+.services .container2 {
+
+    /* align-items: center; */
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(auto-fill, 1fr);
     grid-template-rows: 1fr 1fr;
     margin-top: 50px;
-    margin-left: 200px;
-    margin-right: auto;
-    /* background-color: #ebeced; */
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 
@@ -288,11 +293,10 @@ body {
 .services .item {
     padding: 20px;
     background-color: rgba(237, 237, 237, 0.3);
-    max-width: 450px;
+    width: 450px;
+
     height: 200px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     border-radius: 6px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
@@ -306,12 +310,14 @@ body {
     font-weight: bold;
 }
 
-.services .item .item-head i {
+.services .item i {
     color: var(--main-color);
     margin-right: 20px;
+    margin-top: 15px;
+
 }
 
-.services .item p {
+.services .item .item-head p {
     line-height: 1.6;
     font-size: 15px;
 }
@@ -320,20 +326,66 @@ body {
 .services .item .item-head {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .services .merged-cellule img {
-    position: relative;
-    text-align: center;
+    /* text-align: center; */
+    height: 450px;
+    width: 100%;
 }
 
-.services .merged-cellule img::before {
-    content: "";
-    background-color: chocolate;
-    width: 200px;
-    height: calc(100% + 100px);
-    position: absolute;
-    top: -50px;
-    right: 0px;
-    z-index: -1;
+
+
+@media (max-width: 1669px) {
+    .services .merged-cellule img {
+        display: none;
+    }
+}
+
+.portfolio {
+    background-color: #f6f6f6;
+    padding-top: 160px;
+    padding-bottom: 60px;
+}
+
+.container-portfolio {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+
+.container-portfolio .project {
+    margin-right: 60px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    width: 360px;
+    margin-bottom: 60px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.container-portfolio .project .imag img {
+    height: 240px;
+    /* width: 360px; */
+    overflow: hidden;
+}
+
+.container-portfolio .text {
+    padding: 20px;
+    /* width: 360px; */
+}
+
+.container-portfolio .text h2 {
+    color: var(--main-color);
+    margin: 0;
+}
+
+.container-portfolio .text p {
+    color: #333;
 }
